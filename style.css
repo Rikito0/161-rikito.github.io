@@ -9,7 +9,6 @@ html {
     height: 100%;
     margin: 0;
     font-size: 16px;
-    font-family: "Roboto Cn", sans-serif;
     font-weight: 400;
     line-height: 1.8em;
 }
@@ -22,14 +21,6 @@ html {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
-
-.ptext-a {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
 }
 
 .aku {
@@ -46,54 +37,34 @@ html {
     display: block;
 }
 
-.box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px;
-    padding: 20px;
-    box-sizing: border-box;
-    background: white;
-    border-radius: 4px;
-    box-shadow: 0 5px 15px maroon;
-    display: flex;
-    transition: 0.5s;
+.aku1 {
+    font-family: 'Poppins', sans-serif;
 }
 
-.box:hover {
-    box-shadow: maroon;
+.itu1 {
+    font-family: 'Long Cang', cursive;
+    text-transform: uppercase;
+    display: block;
 }
 
-.box .imgBx {
-    width: 150px;
-    flex: 0 0 150px;
+.aku2 {
+    font-family: 'Poppins', sans-serif;
 }
 
-.box .imgBx img {
-    max-width: 100%;
+.itu2 {
+    font-family: 'Long Cang', cursive;
+    text-transform: uppercase;
+    display: block;
 }
 
-.box .content {
-    padding-left: 20px;
+.span {
+    color: maroon;
 }
-
-.box .content h2 {
-    margin: 0;
-    padding-left: 0;
-    font-size: 22px;
-}
-
-.box .content p {
-    margin: 0;
-    padding: 10px 0 0;
-    text-align: justify;
-}
-
 
 .section {
     position: relative;
     text-align: center;
+
     padding: 0 3rem;
     overflow: hidden;
 }
@@ -110,6 +81,8 @@ html {
 
 .section-dark .side {
     flex: 50%;
+    font-family: 'Poppins', sans-serif;
+    table-layout: auto;
     background-color: lightgray;
     padding: 20px;
     color: maroon;
@@ -118,18 +91,39 @@ html {
 
 .section-dark .main {
     flex: 50%;
+    font-family: 'Poppins', sans-serif;
     background-color: lightgray;
     padding: 20px;
     color: maroon;
     text-align: center;
 }
 
-.section-light .side1 {
+.fakeimg img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.section-light .side {
     flex: 50%;
+    margin: 0;
+    padding: 0;
     background-color: lightgray;
     padding: 20px;
     color: maroon;
     text-align: center;
+}
+
+.section-light .side h1 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.section-light .side h4 {
+    font-family: 'Long Cang', cursive;
+}
+
+ul li {
+    list-style: none;
 }
 
 .section-1 {
@@ -153,6 +147,85 @@ html {
     font-size: 27px;
     letter-spacing: 8px;
     text-transform: uppercase;
+}
+
+.container1 {
+    display: flex;
+    position: relative;
+    width: 350px;
+    height: 230px;
+    margin: 120px auto;
+    background: transparent;
+}
+
+.container1 .box1 {
+    display: flex;
+    position: relative;
+    width: calc(400px - 30px);
+    height: calc(300px - 30px);
+    background: white;
+    box-sizing: border-box;
+    float: left;
+    margin: 15px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.container1 .box1 .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: plum;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.container1 .box1:hover .icon {
+    top: 20px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.container1 .box1 .icon .fa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.5s;
+    color: white;
+}
+
+.container1 .box1:hover .icon .fa {
+    font-size: 40px;
+}
+
+.container1 .box1 .content1 {
+    position: absolute;
+    height: calc(100% - 100px);
+    top: 100%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.container1 .box1:hover .content1 {
+    top: 100px;
+    opacity: 1;
+
+}
+
+.container1 .box1 .content1 h3 {
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 24px;
 }
 
 .ptext .border {
@@ -179,14 +252,23 @@ html {
     min-height: 78%;
 }
 
-@media(max-width:1024px) {
+@media screen and (max-width:700px) {
 
     .pimg1,
     .pimg2,
     .pimg3 {
         background-attachment: scroll;
     }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .container1 .box1 {
+        flex-direction: column;
+    }
 }
+
 
 @keyframes text {
     0% {
